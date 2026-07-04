@@ -1,0 +1,51 @@
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.spec
+
+# ── Virtual environments ──────────────────────────────────────
+.venv/
+venv/
+env/
+.env.local
+
+# ── Secrets / credentials ─────────────────────────────────────
+# .env is intentionally excluded — copy from .env.example
+.env
+
+# ── ML model artifacts ────────────────────────────────────────
+# Generated at runtime by train_if_missing() — not committed.
+# Re-created automatically on every fresh deploy/clone.
+models/*.joblib
+models/*.pkl
+ml/*.pkl
+ml/*.joblib
+
+# ── Node / Frontend ───────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Docker ────────────────────────────────────────────────────
+.dockerignore
+
+# ── IDE / OS ──────────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# ── Testing ───────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/

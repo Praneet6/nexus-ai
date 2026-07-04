@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+    background: radial-gradient(ellipse at top left, #1e1040 0%, #0f0a1e 40%, #030712 100%);
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-gray-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-nexus-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-nexus-500; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .glass-card {
+    @apply glass rounded-2xl shadow-xl shadow-black/20;
+  }
+  .btn-primary {
+    @apply bg-nexus-600 hover:bg-nexus-500 text-white font-semibold px-4 py-2 rounded-xl
+           transition-all duration-200 active:scale-95 shadow-lg shadow-nexus-900/40;
+  }
+  .btn-ghost {
+    @apply border border-white/10 hover:border-nexus-500/50 text-gray-300 hover:text-white
+           font-medium px-4 py-2 rounded-xl transition-all duration-200 active:scale-95;
+  }
+  .input-field {
+    @apply bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500
+           focus:outline-none focus:border-nexus-500 focus:ring-1 focus:ring-nexus-500/50
+           transition-all duration-200;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+  .nexus-gradient {
+    background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #7c3aed 100%);
+  }
+}
+
+/* Typing animation */
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+.typing-dot:nth-child(1) { animation: typing-dot 1.2s infinite 0s; }
+.typing-dot:nth-child(2) { animation: typing-dot 1.2s infinite 0.2s; }
+.typing-dot:nth-child(3) { animation: typing-dot 1.2s infinite 0.4s; }
+
+/* Message bubble animations */
+.message-enter {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Glow effect for active elements */
+.nexus-glow {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
