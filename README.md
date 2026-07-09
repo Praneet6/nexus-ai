@@ -8,7 +8,6 @@
   <p>
     <i>Built for the <b>Flowzint AI Hackathon 2026</b></i><br/>
     <i>Category: <b>Customer Care Bot</b></i><br/>
-    <i>Prize Pool: <b>₹3,00,000</b></i>
   </p>
 
   <p>
