@@ -60,25 +60,22 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen w-screen flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Floating background lights */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[128px] animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[128px] animate-pulse-slow" style={{ animationDelay: '2s' }} />
+    <div className="min-h-screen w-screen flex items-center justify-center p-4 relative overflow-hidden bg-surface">
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-md glass-card p-8 border-white/10 relative z-10"
+        className="w-full max-w-md zenta-card p-8 relative z-10"
       >
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-2xl nexus-gradient flex items-center justify-center nexus-glow">
-            <Shield size={24} className="text-white" />
+          <div className="w-12 h-12 rounded-2xl bg-zenta-600 flex items-center justify-center shadow-md">
+            <span className="text-white text-2xl font-bold">Z</span>
           </div>
           <div>
-            <h2 className="text-2xl font-bold gradient-text">Welcome to Nexus AI</h2>
-            <p className="text-xs text-gray-500 mt-1">Experience the future of customer trust and autonomy.</p>
+            <h2 className="text-2xl font-bold text-text-primary">Welcome to Zenta</h2>
+            <p className="text-sm text-text-secondary mt-1">Intelligent Customer Care</p>
           </div>
         </div>
 
@@ -177,7 +174,7 @@ export default function Login() {
               setIsRegister(!isRegister)
               setError('')
             }}
-            className="text-xs text-nexus-400 hover:text-nexus-300 transition-colors"
+            className="text-xs text-zenta-600 hover:text-zenta-700 transition-colors font-medium"
           >
             {isRegister
               ? 'Already have an account? Sign in'

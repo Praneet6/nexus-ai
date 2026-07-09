@@ -20,9 +20,9 @@ function ConnectionSkeleton() {
         <motion.div
           animate={{ scale: [1, 1.08, 1], opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-16 h-16 rounded-3xl nexus-gradient flex items-center justify-center nexus-glow"
+          className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1D4ED8] flex items-center justify-center shadow-md"
         >
-          <Zap size={28} className="text-white" />
+          <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontWeight: 900, fontSize: '3rem', color: 'white', lineHeight: 1 }}>Z</span>
         </motion.div>
 
         {/* Skeleton bars */}
@@ -30,7 +30,7 @@ function ConnectionSkeleton() {
           {[80, 56, 72].map((w, i) => (
             <motion.div
               key={i}
-              className="h-2.5 rounded-full bg-white/10"
+              className="h-2.5 rounded-full bg-surface-border"
               style={{ width: `${w}%` }}
               animate={{ opacity: [0.4, 0.8, 0.4] }}
               transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
@@ -38,7 +38,7 @@ function ConnectionSkeleton() {
           ))}
         </div>
 
-        <p className="text-xs text-gray-500 tracking-wide">Connecting to Nexus AI…</p>
+        <p className="text-xs text-text-secondary tracking-wide">Connecting to Zenta…</p>
       </motion.div>
     </div>
   )

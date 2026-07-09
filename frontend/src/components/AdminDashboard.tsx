@@ -149,7 +149,7 @@ export function AdminDashboard() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <StatCard
               icon={<Shield size={18} className={healthColor} />}
-              label="Avg Trust Balance"
+              label="Avg Service Score"
               value={data.avg_trust_balance.toFixed(1)}
               sub={data.health.replace('_', ' ')}
               color={healthColor}

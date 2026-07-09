@@ -17,18 +17,18 @@ export default function Admin() {
           {/* Left: logo + breadcrumb */}
           <div className="flex items-center gap-3 min-w-0">
             {/* Logo mark */}
-            <div className="w-8 h-8 rounded-xl nexus-gradient flex items-center justify-center nexus-glow flex-shrink-0">
-              <Zap size={15} className="text-white" />
+            <div className="w-8 h-8 rounded-full bg-zenta-600 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <span className="text-white text-lg font-bold">Z</span>
             </div>
 
             {/* Breadcrumb */}
             <nav className="flex items-center gap-1 text-xs text-gray-500 min-w-0">
               <Link
                 to="/"
-                className="hover:text-nexus-400 transition-colors font-medium truncate"
+                className="hover:text-zenta-600 transition-colors font-medium truncate"
                 title="Back to chat"
               >
-                Nexus AI
+                Zenta
               </Link>
               <ChevronRight size={12} className="flex-shrink-0 text-gray-700" />
               <span className="text-gray-300 font-semibold truncate">Admin Dashboard</span>

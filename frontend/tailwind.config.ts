@@ -6,38 +6,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        nexus: {
-          50:  '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
-          950: '#2e1065',
+        zenta: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb', // Primary Accent
+          700: '#1d4ed8', // Hover Accent
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
         },
+        surface: '#F8FAFC',
+        'surface-border': '#E2E8F0',
+        sidebar: '#F1F5F9',
+        text: {
+          primary: '#0F172A',
+          secondary: '#64748B',
+        }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'fade-in': 'fadeIn 0.3s ease-out',
         'slide-up': 'slideUp 0.4s ease-out',
-        'glow': 'glow 2s ease-in-out infinite',
+        'message-pulse': 'messagePulse 0.4s ease-out',
       },
       keyframes: {
         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
         slideUp: { '0%': { transform: 'translateY(12px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
-        glow: {
-          '0%, 100%': { boxShadow: '0 0 5px rgba(139, 92, 246, 0.3)' },
-          '50%': { boxShadow: '0 0 20px rgba(139, 92, 246, 0.7)' },
+        messagePulse: {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.02)' },
+          '100%': { transform: 'scale(1)' },
         },
       },
-      backdropBlur: { xs: '2px' },
     },
   },
   plugins: [],

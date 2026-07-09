@@ -6,9 +6,9 @@ import clsx from 'clsx'
 const STATE_CONFIG = {
   confident: {
     label: 'Confident',
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-400/10 border-emerald-400/20',
-    dot: 'bg-emerald-400',
+    color: 'text-[#2563EB]',
+    bg: 'bg-[#2563EB]/10 border-[#2563EB]/20',
+    dot: 'bg-[#2563EB]',
     hint: null,
   },
   confused: {
